@@ -57,6 +57,7 @@ section {
 
 .section-heading {
   margin-top: 0
+  text: white;
 }
 
 ::-moz-selection {
@@ -86,7 +87,7 @@ img::-moz-selection {
   background-color: #fff;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-style: italic;
-  
+
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   transition: all .2s
@@ -160,11 +161,33 @@ img::-moz-selection {
     color: #f05f40
   }
 }
+.text-white{
+      background-image: url(../img/header.jpg);
 
+
+      /* Set a specific height */
+      /* height: 500px; */
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
   background-image: url(../img/header.jpg);
+
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
