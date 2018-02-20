@@ -368,7 +368,33 @@
     </section>
 <section id="register">
 
+  <?php
+  $servername = "localhost3308";
+  $username = "root";
+  $password = "";
+  $dbname = "students_classesdb";
 
+  // Create connection
+  $conn = new mysqli($localhost3308, $root, $, $students_classesdb);
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+
+  $sql = "SELECT id, firstname, lastname, class, phoneNumber FROM studentstoclasses";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+          echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"]. " " $row["class"]. " " . "<br>";
+      }
+  } else {
+      echo "0 results";
+  }
+
+  $conn->close();
+?>
 
 </section>
     <!-- Bootstrap core JavaScript -->
